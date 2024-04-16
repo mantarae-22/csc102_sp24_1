@@ -29,16 +29,16 @@ ul, li{
 
 /* Style the links */
 nav{
-    height: 60px;
+    /*height: 60px;
     width: 200px;
-    float: left;
+    float: left;*/
     padding: 5px;
     line-height: 30px;
 }
-
+/*
 main{
     float: right;
-}
+}*/
 
 /* Place the footer at the bottom of the page */
 footer{
@@ -101,6 +101,7 @@ tr:hover{
 nav ul li{
     margin-bottom: 10px;
     text-align: center;
+    display: inline;
 }
 
 nav ul li a{
@@ -111,7 +112,7 @@ nav ul li a{
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease; /* this gives a smooth transition when the background-color changes */
-    display: block;
+    display: inline;
 }
 
 /* change the hover color of our buttons */
