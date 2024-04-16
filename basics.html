@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Basics</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <!-- This is the navigation menu section -->
+        <nav>
+            <!-- ul is unordered list -->
+            <ul>
+                <!-- li is list item -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="boards.html">Boards</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="palindrome.html">Palindrome</a></li>
+                <li><a href="basics.html">Basics</a></li>
+                <li><a href="strings.html">Strings</a></li>
+                <li><a href="w11sound.html">Sound</a></li>
+                <li><a href="w13table_js.html">Table</a></li>
+            </ul>
+            <!-- The a tag is the anchor tag - it creates a hyperlink -->           
+        </nav>
+    </header>
+    <main>
+    <!-- 1 and only 1 H1 tag on a page -->
+    <h1>Here are the basics of programming</h1>
+
+
+    <h2>Variables</h2>
+
+    <script>
+        // This is a single line comment in JavaScript
+        /* This is a multiline comment in JavaScript */ 
+
+        // let's create our first variable
+        var firstName = "Rae";
+        console.log("the value of our first name variable is: " + firstName);
+
+        // create the variable, set it to an empty string;
+        // we will give it a value later
+        var lastName = "";
+
+        // the 3rd way to create a variable - this is a valid way of creating a variable in JavaScript
+        // DO NOT USE THIS METHOD
+        middleName = "Elizabeth";
+
+    </script>
+
+    <h2>Functions</h2>
+
+    <script>
+         // this is a JavaScript function definition; we need to use the keyword function
+        // functions are awesome - you write code 1 time and can reuse it throughout your program
+        // functions help to organize the code
+        // function names should usually be some sort of action
+        // always include the () - sometimes there will be variable(s) in between the () or they may be empty
+        // always make sure there are a matching set of curly braces { } 
+        function runCalc(){ // do not mix ; and {}
+            // whatever code is in between the curly braces belongs to this function
+            // we will create a variable called num1, and we will give it a default value of 0
+            // JavaScript should assume that this is a numberic datatype
+            var num1 = 0;
+            var num2 = 0;
+
+            // we want to prompt the user for a number, using the built in JavaScript prompt function
+            // the prompt function takes an argument (variable) - the text that wil be shown to the user with the prompt
+            // the prompt function returns the value that the user entered in
+            // set the num1 variable equal to the value the user entered in
+            
+            // do while loop will run at least 1 time, and then can run as 
+            // many times as needed; while loops may run 0 times
+            do{
+                // make the user enter a number; this loop will run until a number 
+                // is entered
+                num1 = prompt("Please enter number 1: "); //most lines of JavaScript need a ; at the end     
+            // if isNotaNumber is true (they entered text) or the user entered 0
+            // the loop will keep running
+            }while(isNaN(num1) || num1 == 0); // this ; is mandatory            
+            
+            // get another number from the user and assign it to the num2 variable
+            //num2 = prompt("Please enter number 2: "); //most lines of JavaScript need a ; at the end
+
+            // let's add num1 and num2 together and store that value in the total variable
+            // The build in JavaScript function parseInt makes sure that JavaScript treats the num1 and num2 variables as integers (whole numbers)
+            var total = parseInt(num1) + parseInt(num2);
+
+            // call the built in JavaScript function called alert - this will show a message to the user
+            // it should show our numbers and the total
+            //alert("The total of " + num1 + " plus " + num2 + " is " + total);
+        }
+
+        // we have created the function, now we need to call it so that the function code will run
+        //the () are blank because we don't need to pass any information into this function
+        //runCalc();
+
+        //the code here does not belong to the function
+    </script>
+
+    <h2>Decision Logic (if/else)</h2>
+
+    <script>
+      //creating a variable called age with a default value of 5
+      // 1 equal sign is assignment, the variable on the left is assigned the 
+      // value on the right
+      var age = 7;
+
+      // 2 equal signs mean check for equality, or does the value on the left side
+      // match the value on the right side
+      // if statement, test a value, if the test results in true, run the if block of code
+      if (age == 5){
+        // this code will run if the value of the age variable is 5
+        //alert("age=" + age);
+      }
+      // else if will be checked when the if statement does not evaluate to true
+      else if (age == 6){
+        // this code will run if the value of the age variable is 6
+        //alert("age=" + age);
+      }
+      // the else statement is a catch-all, it will run if none of the if/else if 
+      // statements are true
+      else{
+         // this code will run if the value of the age variable is anything other than
+         // 5 or 6
+         //alert("age was not 5 or 6");
+      }
+
+    </script>
+
+    <h2>Loops</h2>
+
+    <script>
+        // loops run code repeatedly
+        // they are great for displaying data
+        // there are 2 basic types of loops - for loop and while loop
+
+        // We are going to create an infinite loop bug
+        var count = 0;
+
+        // set up a while loop, we want it to run until the counter hits 5
+        while(count <= 5){
+            
+            // do whatever thing this loop needs
+            console.log("count=" + count);
+
+            // change the value of our counter
+            // count++ is the same thing as count = count + 1
+            // count-- is the same thing as count = count - 1
+            count++;
+        }
+
+        // for loops are generally used when you know how many times you want
+        // the code to run
+        // 1st part of our for loop is a counter variable, and we are setting it 
+        // to a default value of 0
+        // 2nd part the condition that the for loop will test on each run 
+        // the loop will run as long as this condition is true
+        // 3rd part is incrementing the counter variable each time the loop runs
+        // i++ is the same thing as i = i + 1
+        for (var i = 0; i < 5; i++){
+            //alert("i=" + i);
+        }
+
+        // counter variable, set to default value of 0
+        var counter = 0;
+        // while loop will run until the counter is equal to 5
+        while(counter < 5){
+            //display the value of counter in an alert
+            //alert("counter=" + counter);
+
+            //increase the value of counter by 1 every time the while loop runs
+            counter++;
+        }
+
+        // while loops are generally used when you do not know how many times you 
+        // want the code to run
+
+
+    </script>
+
+    <!-- We will build an HTML form so we can gather user input and then validate it. 
+        method="post" is the best way to handle what happens with the data in the form. It 
+        will post the data to the page instead of putting the data in the querystring (URL) -->
+    <form method="post" onsubmit="return validateForm();">
+        <!-- Label should be linked to the input by the name of the input;
+             This is the label for the user's name -->
+        <label for="fullname">Full Name:</label>
+        <!-- Text box input where we can gather the user's full name -->
+        <input type="text" id="fullname" name="fullname">
+        <br><br> <!-- 2 line breaks for spacing-->
+        <!-- Label for the email -->
+        <label for="theEmail">Email Address:</label>
+        <!-- Text box input where we can gather the user's email address -->
+        <input type="email" id="theEmail" name="theEmail">
+        <br><br> <!-- 2 line breaks for spacing-->
+        <!-- Label for age -->
+        <label for="age">Age:</label>
+        <!-- Text box input where we can gather the user's age -->
+        <input type="number" id="age" name="age">
+        <br><br> <!-- 2 line breaks for spacing-->
+        <!-- Create a submit button so the form can be validated, etc. -->
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // This function will validate the input that the user entered in our form
+        function validateForm(){
+            // full name the user entered, stored in a variable call fullName
+            var fullName = document.getElementById("fullname").value;
+            // email the user entered, stored in a variable called email
+            var email = document.getElementById("theEmail").value;
+            // age the user entered, stored in a variable called age
+            var age = document.getElementById("age").value;
+
+            // Check to make sure the user has entered a name
+            if (fullName.trim() == ""){
+                // tell the user to enter a name
+                alert("Please enter your name.");
+                // don't allow the form to submit to the server
+                return false; 
+            }
+
+            // Check to make sure the user has entered a email
+            if (email.trim() == ""){
+                // tell the user to enter an email
+                alert("Please enter your email.");
+                // don't allow the form to submit to the server
+                return false; 
+            }
+
+            // Check to make sure the user has entered an age
+            if (age.trim() == ""){
+                // tell the user to enter an age
+                alert("Please enter your age.");
+                // don't allow the form to submit to the server
+                return false; 
+            }
+
+            // Check if age is a number; if the input is not a number, this if statement will be true
+            if (isNaN(age)){
+                // tell the user to enter a number
+                alert("Please enter a valid age");
+                // don't allow the form to submit to the server
+                return false; 
+            }
+
+
+            // allow the form to submit to the server
+            return true;
+        }
+    </script>
+
+    <!-- Event Driven Programming Section -->
+    <h2>Event Driven Programming</h2>
+    <!-- Button 1 -->
+    <button id="button1">Click Me</button>
+    <!-- Button 2 -->
+    <button id="button2" onclick="handleClick2();">Click Me</button>
+
+    <script>
+        // create a shortcut to refer to the HTML button (button 1)
+        var button1 = document.getElementById("button1");
+
+        // this is our event handler; it is just a function that we set up to run when the button is clicked
+        function handleClick(event){
+            alert("Button Clicked!")
+        }
+
+        // Wire the button to listen for the event (when the button is clicked)
+        button1.addEventListener("click", handleClick);
+
+        // function to handle the button 2 click event
+        function handleClick2(event){
+            alert("Button 2 Clicked!");
+        }
+    </script>
+</main>
+</body>
+</html>

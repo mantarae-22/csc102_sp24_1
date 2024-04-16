@@ -1,0 +1,125 @@
+/* This is a comment in CSS. This is the only style option for a comment.
+   This is a multi-line comment. 
+
+   The format of a CSS style is:
+
+   selector{
+       property: value;
+       property2: value;
+   }
+
+   All of the HTML page content is in the body section, so when we use the body selector, we are changing things for the whole page.
+
+   We are changing the background color and the text color.
+*/
+body{
+    background-color: rgb(231, 186, 162);
+    color: rgb(29, 6, 6);
+}
+
+/* Heading 1, we are going to change the font used for this page title, and the text color */
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(10, 10, 44);
+}
+
+ul, li{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Style the links */
+nav{
+    height: 60px;
+    width: 200px;
+    float: left;
+    padding: 5px;
+    line-height: 30px;
+}
+
+main{
+    float: right;
+}
+
+/* Place the footer at the bottom of the page */
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    text-align: center;
+}
+
+/* This is a custom selector - it will only affect an item on the HTML page that has an ID of memeImage;
+   These settings will help with a future assignment. */
+#memeImage{
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width: 200px;
+}
+
+/* Change the header to be in the center of the page. */
+header{
+    text-align: center;
+}
+
+/* Table Styles */
+table{
+    width: 100%;
+    border-collapse: collapse; /* this prevents stacked border lines */
+}
+
+th, td{
+    border: 1px solid white;
+    text-align: left;
+    padding: 8px;
+}
+
+th{
+    background-color: blue;
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color: rgb(212, 203, 203);
+    color: black;
+}
+
+/* when the table row is hovered over by the mouse, change the colors */
+tr:hover{
+    background-color:rgb(32, 23, 18);
+    color:rgb(231, 186, 162);
+}
+
+/* Menu styles */
+ /* set the nav and ul to some default settings */
+ nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    background-color: rgb(18, 18, 87);
+    color: rgb(238, 238, 238);
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* this gives a smooth transition when the background-color changes */
+    display: block;
+}
+
+/* change the hover color of our buttons */
+nav ul li a:hover{
+    background-color: rgb(64, 64, 173);
+}
+
+/* when the link is active */
+nav ul li a.active{
+    background-color:rgb(14, 42, 120);
+}

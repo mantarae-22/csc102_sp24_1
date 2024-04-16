@@ -12,6 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- This title will appear in the browser tab. Make it short and descriptive. -->
     <title>CSC102 Index</title>
+    <!-- This will link our CSS file to our HTML page; href is the name of the CSS file;
+    stylesheet tells the browser that this is our stylesheet -->
+    <link href="main.css" rel="stylesheet">
+
+    <!-- Link the JavaScript file to this page -->
+    <script src="code.js"></script>
+
 </head>
 
 <!-- Everything we want to show to the user goes in the body section -->
@@ -20,14 +27,30 @@
     <header>
         <!-- This is the navigation menu section -->
         <nav>
-            <!-- The a tag is the anchor tag - it creates a hyperlink -->
-            <a href="index.html">Home</a> &nbsp;
-            <a href="boards.html">Boards</a>
+            <!-- ul is unordered list -->
+            <ul>
+                <!-- li is list item -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="boards.html">Boards</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="palindrome.html">Palindrome</a></li>
+                <li><a href="basics.html">Basics</a></li>
+                <li><a href="strings.html">Strings</a></li>
+                <li><a href="w11sound.html">Sound</a></li>
+                <li><a href="w13table_js.html">Table</a></li>
+            </ul>
+            <!-- The a tag is the anchor tag - it creates a hyperlink -->           
         </nav>
     </header>
 
     <!-- Add header text. There should be 1 and only 1 h1 tag on a page. -->
     <h1>Welcome to my CSC102 page.</h1>
+
+    <!-- This is the button that will start our image moving around -->
+    <input type="button" onclick="startImageMove();" value="Start Moving Image">
+
+     <!-- This is the button that will stop our image moving around -->
+     <input type="button" onclick="stopImageMove();" value="Stop Moving Image">
 
     <!-- This is a paragraph, by default there will be spacing before and after the p tags. -->
     <p>
@@ -42,7 +65,7 @@
         2625 W Baseline Rd.<br>
         Tempe, AZ 85283
     </footer>
-    
+
 <!-- Make sure the closing body tag is at the bottom of the page -->
 </body>
 <!-- Closing html tag should be at the end of every file -->

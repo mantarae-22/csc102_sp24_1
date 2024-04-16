@@ -11,6 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- This title will appear in the browser tab. Make it short and descriptive. -->
     <title>CSC102 Boards</title>
+    <!-- This will link our CSS file to our HTML page; href is the name of the CSS file;
+    stylesheet tells the browser that this is our stylesheet -->
+    <link href="main.css" rel="stylesheet">
 </head>
 
 <!-- Everything we want to show to the user goes in the body section -->
@@ -19,26 +22,37 @@
     <header>
         <!-- This is the navigation menu section -->
         <nav>
-            <!-- The a tag is the anchor tag - it creates a hyperlink -->
-            <a href="index.html">Home</a> &nbsp;
-            <a href="boards.html">Boards</a>
+            <!-- ul is unordered list -->
+            <ul>
+                <!-- li is list item -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="boards.html">Boards</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="palindrome.html">Palindrome</a></li>
+                <li><a href="basics.html">Basics</a></li>
+                <li><a href="strings.html">Strings</a></li>
+                <li><a href="w11sound.html">Sound</a></li>
+                <li><a href="w13table_js.html">Table</a></li>
+            </ul>
+            <!-- The a tag is the anchor tag - it creates a hyperlink -->           
         </nav>
     </header>
-    <!-- Add header text. There should be 1 and only 1 h1 tag on a page. -->
-    <h1>Welcome to my CSC102 Boards page.</h1>
+    <main>
+        <!-- Add header text. There should be 1 and only 1 h1 tag on a page. -->
+        <h1>Welcome to my CSC102 Boards page.</h1>
 
-    <!-- This is a paragraph, by default there will be spacing before and after the p tags. -->
-    <p>
-        1. Follow a software development process to analyze a problem and to design, build and test software solutions.<br><br>
-        2. Demonstrate software development skills using more than one programming language and development environment.<br><br>
-        3. Implement data-driven solutions.<br><br>
-        4. Design and implement software solutions for mobile devices, embedded systems and/or multiple platforms.<br><br>
-        5. Document the planning and development of software applications using industry-standard tools, techniques and 
-        processes.<br><br>
-        6. Within software solutions, describe, implement and analyze data structure techniques such as lists, trees, hash tables and
-        graphs, along with sorting and searching algorithms.<br><br>
-    </p>
-    
+        <!-- This is a paragraph, by default there will be spacing before and after the p tags. -->
+        <p>
+            1. Follow a software development process to analyze a problem and to design, build and test software solutions.<br><br>
+            2. Demonstrate software development skills using more than one programming language and development environment.<br><br>
+            3. Implement data-driven solutions.<br><br>
+            4. Design and implement software solutions for mobile devices, embedded systems and/or multiple platforms.<br><br>
+            5. Document the planning and development of software applications using industry-standard tools, techniques and 
+            processes.<br><br>
+            6. Within software solutions, describe, implement and analyze data structure techniques such as lists, trees, hash tables and
+            graphs, along with sorting and searching algorithms.<br><br>
+        </p>
+    </main>
  <!-- Add the footer to the bottom of the page -->
  <footer>
     <!-- <br> creates a new line -->
